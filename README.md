@@ -17,8 +17,7 @@ Un projet pour recréer la page de connexion de Gmail avec HTML, CSS, JavaScript
 - **JavaScript** 
 - **PHP** 
 
-## 📥 Installation
+## 📥 Page publie
 
-1. Clonez ce repo :
+[**Cliquez ici pour visiter le site La page** 👌](https://safidial.github.io/Projet-gmail/)
 
-   git clone https://github.com/SafiDial/Projet-gmail.git
