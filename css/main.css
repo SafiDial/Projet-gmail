@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #fafafa;
+    color: #333;
+    font-weight: 300;
+}
+
+/* Barre de navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fafafa;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Menu burger */
+.menu-burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+}
+
+.menu-burger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #dd5347;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-burger.open .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.menu-burger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-burger.open .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+}
+
+/* Liens de navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #dd5347;
+    font-weight: 300;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a.active {
+    background-color: #dd5347;
+    color: white;
+    border-radius: 3px;
+}
+
+/* Section d'accueil */
+#accueil {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.image-accueil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.accueil-contenu {
+    width: 50%;
+    padding: 20px;
+    z-index: 1;
+}
+
+.accueil-contenu h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.bouton-rouge {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dd5347;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.3s;
+    width: fit-content;
+}
+
+.bouton-rouge:hover {
+    background-color: #c04439;
+}
+
+/* Sections */
+.section-pros, .section-connexion, .section-creer-compte {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.section-pros h1, .section-connexion h1, .section-creer-compte h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.section-pros p, .section-connexion p, .section-creer-compte p {
+    font-size: 19.2px;
+}
+
+
+.bouton-fixe {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    padding: 5px 10px;
+    background-color: #dd5347; 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 60px; 
+    transition: background-color 0.3s;
+    z-index: 1000; 
+}
+
+.bouton-fixe:hover {
+    background-color: #c04439; 
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fafafa;
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    .menu-burger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 250px;
+        text-align: right;
+        position: fixed;
+        top: 0;
+        right: -250px; 
+        height: 100vh;
+        background-color: #fafafa;
+        padding: 20px;
+        transition: right 0.3s;
+    }
+
+    nav ul.open {
+        right: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; 
+    }
+
+    #accueil {
+        padding-left: 0;
+    }
+
+    .accueil-contenu {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .accueil-contenu h1 {
+        font-size: 30px;
+    }
+
+    .bouton-rouge {
+        padding: 8px 16px;
+    }
+}
+
+
