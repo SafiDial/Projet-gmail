@@ -17,5 +17,6 @@ Un projet pour recréer la page de connexion de Gmail avec HTML, CSS, JavaScript
 - **JavaScript** 
 - **PHP** 
 
+## 📥 Page publie
 
-[Clique ici pour voir la page statique](https://safidial.github.io/Projet-gmail/)
+[**Cliquez ici pour visiter le site La page** 👌](https://safidial.github.io/Projet-gmail/)
